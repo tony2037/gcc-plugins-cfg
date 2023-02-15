@@ -1,0 +1,1 @@
+dot -Tpdf cfg.dot -o cfg.pdf

@@ -30,7 +30,7 @@ $(PLUGIN): $(OBJECTS)
 
 .PHONY: all clean test
 clean:
-	rm -f $(OBJECTS) $(PLUGIN) *.o
+	rm -f $(OBJECTS) $(PLUGIN) *.o *.dot *.so *.pdf
 
 test: $(PLUGIN)
 	$(CC) -fplugin=./$(PLUGIN) -c test.c

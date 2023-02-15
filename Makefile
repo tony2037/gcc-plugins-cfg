@@ -12,12 +12,15 @@ LDFLAGS=
 LDADD=
 END=
 
+PLUGINNAME?=plugin
+PLUGIN=$(PLUGINNAME).so
+
 SOURCES=\
-    plugin.cc \
+    $(PLUGINNAME).cc \
 	$(END)
 
 OBJECTS=$(patsubst %.cc,%.o,$(SOURCES))
-PLUGIN=plugin.so
+
 
 $(PLUGIN): $(OBJECTS)
 	$(CXX) $(LDFLAGS) -o $@ -shared $+ $(LDADD)
